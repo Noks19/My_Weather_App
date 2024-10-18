@@ -1,5 +1,9 @@
 body {
   background: #f5f1fe;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .weather-app {
