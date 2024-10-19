@@ -12,22 +12,25 @@
   <body>
     <div class="weather-app">
     <header>
-      <form>
-        <input type="search" placeholder="Enter a city" required />
-        <input type="submit" value="Search" />
+      <form class="search-form">
+        <input type="search" placeholder="Enter a city" required class="search-form-input"/>
+        <input type="submit" value="Search" class="search-form-button"/>
       </form>
     </header>
     <br />
     <main>
+    <div class="weather-app-data">
       <div>
-        <hi>Newcastle</hi>
-        <p>
+        <hi class="weather-app-city">Newcastle</hi>
+        <p class="weather-app-details">
           Tuesday 14:30, cloudy
           <br />
-          humidity: 76%, wind: 3.13km/h
+          humidity: <strong>76%</strong>, wind: <strong>3.13km/h</strong>
         </p>
-      </div>
-      <div>☁ 16℃</div>
+     </div>
+      <div class="weather-app-container">
+        <div class="weather-app-icon">☁</div> <div class="weather-app-temp">16</div> <div class="weather-app-unit">℃</div>
+    </div>
     </main>
   </body>
 
