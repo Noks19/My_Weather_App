@@ -18,7 +18,6 @@ function latestWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 }
 
-
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
