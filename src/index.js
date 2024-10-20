@@ -18,9 +18,13 @@ function latestWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 }
 
+
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
+  let isAM = hours < 12;
+
+  hours = hours % 12 || 12;
   let days = [
     "Sunday",
     "Monday",
@@ -36,9 +40,8 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes} ${isAM ? `AM` : `PM`}`;
 }
-
 function searchCity(city) {
   let apiKey = "cob5et6c97b753fe452a00f1cf914a6d";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metric`;
